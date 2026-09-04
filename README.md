@@ -1,6 +1,6 @@
 # Voice-Controlled Car
 
-ESP32-based mobile robot controlled through offline voice commands using analog signal conditioning, real-time digital filtering, energy-based classification, and dual-channel motor control.
+ESP32-based mobile robot controlled by offline voice commands using analog signal conditioning, band-pass filtering, energy-based classification, and dual-channel motor control.
 
 <p align="center">
   <img src="media/images/robot-overview.jpeg" alt="Voice-controlled car prototype" width="700">
@@ -62,7 +62,7 @@ L298N Motor Driver
 - Energy-based voice-command classification
 - Experimentally calibrated detection thresholds
 - PWM motor-speed control
-- Four-motor drive with two independently driven H-bridge channels
+- Four-motor drive with two independently driven H-bridge channels, each controlling two TT motors
 - No cloud processing or external communication required
 
 ## Hardware
