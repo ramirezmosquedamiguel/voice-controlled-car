@@ -1,6 +1,6 @@
 # Voice-Controlled Car
 
-ESP32-based mobile robot controlled through offline voice commands using analog signal conditioning, real-time digital filtering, energy-based classification, and differential motor control.
+ESP32-based mobile robot controlled through offline voice commands using analog signal conditioning, real-time digital filtering, energy-based classification, and dual-channel motor control.
 
 <p align="center">
   <img src="media/images/robot-overview.jpeg" alt="Voice-controlled car prototype" width="700">
@@ -62,7 +62,7 @@ L298N Motor Driver
 - Energy-based voice-command classification
 - Experimentally calibrated detection thresholds
 - PWM motor-speed control
-- Differential-drive configuration with four TT motors
+- Four-motor drive with two independently driven H-bridge channels
 - No cloud processing or external communication required
 
 ## Hardware
@@ -172,6 +172,19 @@ Channel B
 </p>
 
 The diagram shows the physical wiring used for the prototype, including the ESP32, MCP6002 signal-conditioning stage, L298N motor driver, microphone and four TT motors.
+
+## Getting Started
+
+1. Assemble the circuit according to the wiring diagram.
+2. Open `firmware/voice_controlled_car/voice_controlled_car.ino` in Arduino IDE.
+3. Select the corresponding ESP32 board and compile using Arduino-ESP32 Core 3.x.
+4. Upload the firmware to the ESP32.
+5. Open the Serial Monitor at **115200 baud**.
+6. Use the calibrated voice commands:
+   - **O** → Forward
+   - **I** → Reverse
+
+> The detection thresholds were calibrated experimentally for this prototype and may require adjustment when changing the microphone, analog gain, speaker, or operating environment.
 
 ## Demonstration
 
